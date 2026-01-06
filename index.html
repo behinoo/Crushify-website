@@ -112,6 +112,36 @@
             margin-right: auto;
         }
 
+        .price-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .free-tag {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .price-note {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .cta-subtext {
+            font-size: 1rem !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin-bottom: 30px !important;
+            margin-top: -10px !important;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 20px;
@@ -562,10 +592,15 @@
                 Privacy-first, intelligent, and always by your side.
             </p>
             
+            <div class="price-badge">
+                <span class="free-tag">FREE</span>
+                <span class="price-note">Optional premium features available</span>
+            </div>
+            
             <div class="cta-buttons">
                 <a href="#download" class="cta-button cta-primary">
                     <i class="fab fa-google-play"></i>
-                    Download Now
+                    Download FREE
                 </a>
                 <a href="#features" class="cta-button cta-secondary">
                     <i class="fas fa-star"></i>
@@ -736,12 +771,13 @@
     <!-- CTA Section -->
     <section class="cta-section" id="download">
         <h2>Ready to Amplify Your Crush? 💕</h2>
-        <p>Download Crushify now and transform your dating conversations with the power of AI.</p>
+        <p>Download Crushify FREE and transform your dating conversations with the power of AI.</p>
+        <p class="cta-subtext">No payment required to download • Optional premium features available</p>
         
         <div class="cta-buttons">
             <a href="https://play.google.com/store" class="cta-button cta-primary">
                 <i class="fab fa-google-play"></i>
-                Get on Google Play
+                Download FREE on Google Play
             </a>
         </div>
     </section>
