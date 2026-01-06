@@ -546,6 +546,92 @@
             }
         }
 
+        /* App Screenshots Showcase - Hero Style */
+        .hero-screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            perspective: 1000px;
+        }
+
+        .phone-mockup {
+            position: relative;
+            animation: floatPhone 3s ease-in-out infinite;
+        }
+
+        .phone-mockup:nth-child(1) { animation-delay: 0s; }
+        .phone-mockup:nth-child(2) { animation-delay: 0.5s; }
+        .phone-mockup:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes floatPhone {
+            0%, 100% { transform: translateY(0) rotateY(0deg); }
+            50% { transform: translateY(-15px) rotateY(5deg); }
+        }
+
+        .phone-mockup img {
+            width: 180px;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .phone-mockup:hover img {
+            transform: scale(1.08) rotateY(10deg);
+            box-shadow: 0 35px 100px rgba(0, 0, 0, 0.6);
+        }
+
+        .phone-mockup .phone-label {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .phone-mockup:hover .phone-label {
+            opacity: 1;
+        }
+
+        .phone-mockup.center-phone {
+            z-index: 2;
+            transform: scale(1.15);
+        }
+
+        .phone-mockup.center-phone img {
+            width: 200px;
+        }
+
+        .phone-mockup.side-phone {
+            opacity: 0.85;
+            transform: scale(0.9);
+        }
+
+        @media (max-width: 768px) {
+            .hero-screenshots {
+                gap: 10px;
+            }
+            
+            .phone-mockup img {
+                width: 100px;
+            }
+            
+            .phone-mockup.center-phone img {
+                width: 120px;
+            }
+        }
+
         /* App Screenshots Section */
         .screenshots-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
@@ -663,6 +749,22 @@
                 <a href="https://play.google.com/store/apps/details?id=com.secure.reply.secure_reply_generator">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="store-badge">
                 </a>
+            </div>
+            
+            <!-- Hero Screenshots Showcase -->
+            <div class="hero-screenshots">
+                <div class="phone-mockup side-phone">
+                    <img src="Profile.png" alt="Profile Management">
+                    <span class="phone-label">Profile Management</span>
+                </div>
+                <div class="phone-mockup center-phone">
+                    <img src="02_quick_conv.png" alt="AI Reply Generation">
+                    <span class="phone-label">AI Replies</span>
+                </div>
+                <div class="phone-mockup side-phone">
+                    <img src="DateIDEA.png" alt="Date Ideas">
+                    <span class="phone-label">150+ Date Ideas</span>
+                </div>
             </div>
         </div>
     </section>
