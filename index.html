@@ -546,6 +546,57 @@
             }
         }
 
+        /* App Screenshots Section */
+        .screenshots-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            padding: 100px 20px;
+        }
+
+        .screenshots-section .section-title h2,
+        .screenshots-section .section-title p {
+            color: white;
+            -webkit-text-fill-color: white;
+        }
+
+        .screenshots-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .screenshot-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .screenshot-item img {
+            width: 220px;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .screenshot-item p {
+            color: white;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .screenshot-item img {
+                width: 160px;
+            }
+        }
+
         /* Floating Hearts Animation */
         .floating-hearts {
             position: absolute;
@@ -704,6 +755,29 @@
                     <h3>Get Perfect Replies</h3>
                     <p>Crushify's AI generates multiple contextual reply suggestions. Simply copy your favorite and send! Track your conversations for even better future suggestions.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="section-title">
+            <h2>📱 See It In Action</h2>
+            <p>Beautiful, intuitive design that makes dating easier</p>
+        </div>
+        
+        <div class="screenshots-container">
+            <div class="screenshot-item">
+                <img src="02_quick_conv.png" alt="Quick Conversation - AI Reply Generation">
+                <p>AI Reply Generation</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="Profile.png" alt="Profile Management">
+                <p>Profile Management</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="DateIDEA.png" alt="Date Ideas">
+                <p>150+ Date Ideas</p>
             </div>
         </div>
     </section>
