@@ -1,0 +1,344 @@
+<!-- 
+    CRUSHIFY - GOOGLE SITES EMBEDDABLE CONTENT
+    ==========================================
+    This is a simpler, cleaner version specifically designed 
+    for embedding in Google Sites or copying sections.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crushify - Amplify Your Crush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 0 0 40px 40px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero .tagline {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #764ba2;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Section */
+        .section {
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.2em;
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        .section-title p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .feature {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border-top: 4px solid #764ba2;
+        }
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .feature p {
+            color: #666;
+        }
+        
+        /* Steps */
+        .steps {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .step-num {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .step p {
+            color: #666;
+        }
+        
+        /* Privacy */
+        .privacy-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .badge {
+            text-align: center;
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 20px;
+            min-width: 150px;
+        }
+        .badge-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .badge span {
+            font-weight: 600;
+            color: #2e7d32;
+        }
+        
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 40px;
+        }
+        .cta h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .cta p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer a {
+            color: #f093fb;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer p {
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2em; }
+            .step { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Crushify 💕</h1>
+        <div class="tagline">Amplify Your Crush</div>
+        <p>Your AI-powered dating companion that helps you craft perfect replies, analyze profiles, and boost your confidence in every conversation.</p>
+        <a href="https://play.google.com/store" class="btn">📱 Download Now</a>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="section">
+        <div class="section-title">
+            <h2>✨ Powerful Features</h2>
+            <p>Everything you need to boost your dating game</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>AI Reply Generation</h3>
+                <p>Get contextual, witty replies powered by advanced AI. Screenshot or type - we've got you covered.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📷</div>
+                <h3>Screenshot OCR</h3>
+                <p>On-device text extraction keeps your conversations private and secure.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👥</div>
+                <h3>Profile Management</h3>
+                <p>Create workspaces for each match with conversation history tracking.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Profile Analysis</h3>
+                <p>AI-powered compatibility insights and personalized opening lines.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✍️</div>
+                <h3>Bio Generator</h3>
+                <p>Create compelling bios for Tinder, Bumble, Hinge, and more.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">❤️</div>
+                <h3>150+ Date Ideas</h3>
+                <p>Curated activities filtered by category, budget, and duration.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="section" style="background: #f8f9fa;">
+        <div class="section-title">
+            <h2>🚀 How It Works</h2>
+            <p>Get started in 3 simple steps</p>
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>Capture the Conversation</h3>
+                    <p>Screenshot the dating app or type the message you received.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>Choose Your Tone</h3>
+                    <p>Pick from 8+ styles: casual, flirty, romantic, confident, and more.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>Get Perfect Replies</h3>
+                    <p>AI generates contextual suggestions. Copy and send!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIVACY SECTION -->
+    <div class="section">
+        <div class="section-title">
+            <h2>🔒 Privacy First</h2>
+            <p>Your conversations stay private - always</p>
+        </div>
+        
+        <div class="privacy-badges">
+            <div class="badge">
+                <div class="badge-icon">📱</div>
+                <span>On-Device OCR</span>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🗑️</div>
+                <span>Instant Deletion</span>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🔐</div>
+                <span>AES-256 Encryption</span>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🛡️</div>
+                <span>No Cloud Storage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="cta">
+        <h2>Ready to Amplify Your Crush? 💕</h2>
+        <p>Download Crushify and transform your dating conversations today.</p>
+        <a href="https://play.google.com/store" class="btn">Get on Google Play</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="mailto:cognizenai@gmail.com">Contact</a>
+        </div>
+        <p>© 2025 CognizenAI. All rights reserved. Made with 💕</p>
+    </div>
+
+</body>
+</html>
